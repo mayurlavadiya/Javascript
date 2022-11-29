@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Selector - for DOM targe and DOM elements select</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+    <style>
+        body{ font-family: arial; }
+        #box{
+            border: 2px solid yellowgreen;
+            padding:10px 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <script>
+        for all element select
+        $("*");
+
+        for parent and child element select
+        $("ul il"); // ul ma jetala element hoi li e j select krva mate
+        
+        for all element select
+        $(".abc, .xyz, .abcd"); // multiple class select
+
+        for all element select
+        $("h1, p, div"); // multiple tag select
+
+    </script> -->
+
+    <h1>jquery Selectors</h1>
+	<div id="box" class="test">
+		<h2>Test Box 2</h2>
+		<p>Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Nam, 
+            repellendus veniam pariatur distinctio voluptas assumenda saepe,Quam!</p>
+	</div>
+	<ul id="list">
+		<li>Orange</li>
+		<li class="test">Banana</li>
+		<li>Grapes</li>
+		<li class="test">Apple</li>
+		<li>Guava</li>
+	</ul>   
+
+    <script>
+        $(document).ready(function(){
+            
+            $("#list").css("color","red"); // id
+            $(".test").css("color", "green"); // class
+            $("h1").css("color","blue");// tag
+            $(".test").css("border", "2px solid red"); // class
+
+        });
+
+    </script>
+</body>
+</html>

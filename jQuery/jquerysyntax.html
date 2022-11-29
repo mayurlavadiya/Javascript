@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>jQuery CDN Implement</title>
+    <style>
+		p{ margin: 0; }
+
+		h2{ margin: 5px 5px; }
+
+		#test1{
+			display: inline-block;
+			background: pink;
+			width: 300px;
+		    height: 250px;
+		    padding: 10px 10px;
+		    margin: 0 50px 0 0;
+            text-align: center;
+		}
+
+		#test2{
+			display: inline-block;
+			background: orange;
+			width: 300px;
+		    height: 250px;
+		    padding: 10px 10px;
+            text-align: center;
+
+		}
+	</style>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h2>JQUERY SYNTAX</h2>
+
+    <script>
+        //document = selector & ready = method
+        // aakhu document ready thy jay pachi kai metho work krse
+       
+        // Method - 1
+            // $(document).ready(function(){
+
+            // });
+
+        // // Method - 2
+
+            // $(function(){
+
+            // });
+
+            
+    </script>
+
+    <div id="test1">
+        <h2>Text Box 1 </h2>
+        <p class="text-center">HEllo Im Mayur</p>
+    </div>
+
+    <div id="test2">
+        <h2>Text Box 2 </h2>
+        <p class="text-center">Im KD</p>
+
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            var a = $('#test1').html();
+            var b = $('#test2').html();
+            
+            console.log(a,b);
+            // console.log(b);
+        });
+    </script>
+    
+</body>
+</html>

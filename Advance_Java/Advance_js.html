@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Advance JS</title>
+
+        <h2>Rest operator : string sivay jetli value hoi ene array ma convert
+            kre</h2>
+        <script>
+        function sum(name, ...args){ // ...args e rest operator
+		console.log(arguments);
+		document.write(`Hello ${name} <br>
+			             Your Marks : `);
+		
+		let sum = 0;
+		for(let i in args){
+			sum += args[i];
+		}
+
+		document.write(sum);
+	}
+
+	sum("Mayur Lavadiya",10,20,30,40,50);
+
+   
+   </script>
+        <h2>Spread operator 1 : </h2>
+        <script>
+        function sum(name, ...args){
+		console.log(arguments);
+		document.write(`Hello ${name} <br>
+			             Your Marks : `);
+		
+		let sum = 0;
+		for(let i in args){
+			sum += args[i];
+		}
+		document.write(sum);
+	    }
+        var arr = [10,20,30];
+
+	    sum("Mayur Lavadiya", ...arr); // array ni agal 3 dot karine spread operate kri shkie
+
+    </script>
+
+    </script>
+        <h2>Spread operator 2 : </h2>
+        <script>
+        
+        var arr1 = [10,20,30];
+
+        var arr2 = [...arr1]
+        arr1.push(50); // push function use for adding value in array
+        console.log(arr1);
+        console.log(arr);
+
+    </script>
+
+</script>
+    
+<h2>Spread operator 3 : with object </h2>
+    <script>
+
+    var obj1 = {
+        name : "Mayur",
+        age : "25"
+    };
+
+    var obj2 = {
+        course : "BSC I.T"
+    }
+
+    var obj3 = {...obj1,...obj2};
+    document.write("With Object " + obj3);
+    console.log(obj3);
+
+    </script>
+
+<h2>Object Literals</h2>
+    <script>
+        let name = "MAYUR LAVADIYA"; 
+        let course = "BSC IT";
+
+        // var obj ={
+        //     name : "name", if properties and value are same then
+        //     course : "course"
+        // };
+
+        // NEW METHOD 
+        var obj ={
+            name, 
+            course,
+        };
+        document.write(`Name : ${name} <br>`);        
+        document.write(`COURSE : ${course} <br>`);        
+        document.write("Console ma check kro bhai......");      
+        console.log(obj);
+
+        let n = "name";
+        var abc ={
+            [n] : "MeET",
+            course : "BCA"
+        };
+        console.log(abc.name);
+        
+        // Example 2
+
+        let nn = "student";
+        var abcd={
+            [nn + "name"] : "XYZ",
+            course : "BCA",
+
+            details : function(){
+                return `${this.studentname} is student of ${this.course}`
+            }
+        };
+        console.log(abcd);
+        console.log(abcd.details());
+
+        // Example 3 : function call krva new method
+        
+        let nnn = "student";
+        var abcd={
+            [nnn + "name"] : "TEST123",
+            course : "MBA EXTERNAL",
+
+        details1(){
+            return `${this.studentname} is student of ${this.course}`
+            }       
+        };
+        console.log(abcd['details1']());
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

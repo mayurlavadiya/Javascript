@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY EVENT</title>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/event.js"></script>
+
+    <style>
+        body{ font-family: arial; }
+        #box{
+            border: 2px solid yellowgreen;
+            padding:10px 10px;
+            background-color: aquamarine;
+        }
+
+        #box1{
+            border: 2px solid coral;
+            padding:10px 10px;
+            background-color:cornsilk;
+        }
+
+        
+        #box2{
+            background: pink;
+			padding:10px;
+			border:1px solid #000;
+		}
+
+    </style>
+</head>
+<body>
+    <h2>JQUERY MOUSE EVENT</h2>
+    <div id="box" class="test">
+        <p>HEY HELLO EVERYONE.......................
+            click single time to make change </p><br>
+            click double time to make change  
+            click right to make change  - context menu
+        </p>
+    </div>
+
+    <script> 
+        $(document).ready(function(){
+            // click event
+            $('#box').click(function(){ // click event pr function bnavyu emne em j
+                $('#box').css('background-color','green');
+            });
+            
+            // double click event
+            $('#box').dblclick(function(){ // click event pr function bnavyu emne em j
+                $('#box').css('background-color','red');
+            });
+
+            // Context Menu event ( right click event)
+            $('#box').contextmenu(function(){ // click event pr function bnavyu emne em j
+                $('#box').css('background-color','blue');
+            });
+
+            // Mouse Enter event - mouse hover thay tag pr etle work kre
+            $('#box').mouseenter(function(){ // click event pr function bnavyu emne em j
+                $('#box').css('background-color','burlywood');
+            });
+
+            // Mouse Leave event - mouse leave thay tag pr etle work kre
+            $('#box').mouseleave(function(){ // click event pr function bnavyu emne em j
+                $('#box').css('background-color','purple');
+            });
+        });
+        
+    </script>
+
+<h2>JQUERY KEYBOARD EVENT</h2>
+<div id="box1" class="test">
+    <p>HEY HELLO EVERYONE.......................
+        Press any key to make change </p><br>
+        Press Down/Up key to make change
+
+    </p>
+</div>
+<script>
+    $(document).ready(function(){
+        $('body').keypress(function(){
+            // $(this).css('background-color','red');
+        });
+
+        $('body').keydown(function(){
+            // $(this).css('background-color','green');
+        });
+
+        $('body').keyup(function(){
+            // $(this).css('background-color','black');
+        });
+    });
+</script>
+
+
+<h2>JQUERY FORM EVENT</h2>
+
+    <form action="" id="sform">
+		<label for="">Name</label><input type="name" id="sname"><br><br>
+		<label for="">class</label><input type="text" id="sclass"><br><br>
+		<label for="">Country</label>
+		<select id="scountry">
+			<option value="India">India</option>
+			<option value="Pakistan">Pakistan</option>
+			<option value="Bangladesh">Bangladesh</option>
+			<option value="Sri Lanka">Sri Lanka</option>
+			<option value="Nepal">Nepal</option>
+		</select><br><br>
+		<input type="submit">
+	</form>
+	<div id="test" style="border:1px solid red;margin-top:20px;"></div>
+ 
+    
+</body>
+</html>
