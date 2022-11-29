@@ -20,6 +20,7 @@
             Dolorum iste, provident ut ullam fuga incidunt quos veritatis. Est ratione magnam id sint ad 
             vero quo architecto distinctio, dignissimos, maiores. Ipsa dicta libero voluptatibus at sed eius.</p>
 	</div><br>
+
 	<h1>jQuery Get Methods</h1>
 	<form action="" id="sform">
 		<label for="">Name</label><input type="name" id="sname"><br><br>
@@ -56,6 +57,16 @@
             console.log(c);
 
 
+            // Get data from Form Insert Value
+
+            $('#sform').submit(function(){
+                var name = $('#sname').val();
+                var classname = $('#sclass').val();
+                var country = $('#scountry').val();
+
+                alert("Hello :" + name + " Class  :" + classname + "Country :" + country);
+            });
+           
         });
 		
 	</script>
