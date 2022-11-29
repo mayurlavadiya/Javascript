@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>Learn jquery</title>
-	<style>
+    <head>
+        <title>Learn jquery</title>
+        <style>
 		body{ font-family: arial; }
 		#box{
 			background: pink;
@@ -12,29 +12,43 @@
 
 		.red{ color:red; }
 	</style>
-</head>
-<body>
-	<h1>jQuery Set Methods</h1>
-	<div id="box" class="test">
-		<h2>Test Box</h2>
-		<p>Lorem ipsum <span>dolor sit amet</span> consectetur adipisicing elit. Laborum nostrum voluptate delectus.</p>
-	</div><br>
-	<button id="clickbutton">Set value</button><br><br>
-	<h1>jQuery Set Method : For change the text value</h1>
-	<form action="" id="sform">
-		<label for="">Name</label><input type="name" id="sname"><br><br>
-		<label for="">class</label><input type="text" id="sclass"><br><br>
-		<input type="submit">
-	</form>
-	<!-- jquery cdn -->
-	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script>
-		$(document).ready(function(){
+    </head>
+    <body>
+        <h1>jQuery Set Methods - MAYUR LAVADIYA</h1>
+        <div id="box" class="test">
+            <h2>Test Box</h2>
+            <p>Lorem ipsum <span>dolor sit amet</span> consectetur adipisicing
+                elit. Laborum nostrum voluptate delectus.</p>
+        </div><br>
+        <button id="clickbutton">Set value</button><br><br>
+        <h1>jQuery Set Method : For change the text value</h1>
+        <form action="" id="sform">
+            <label for="">Name</label><input type="name" id="sname"><br><br>
+            <label for="">class</label><input type="text" id="sclass"><br><br>
+            <input type="submit">
+        </form>
+        <!-- jquery cdn -->
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script>
+       
+       $(document).ready(function(){
             $('#clickbutton').click(function(){
+                
+                // text method for SET 
                 $('#box h2').text("Hello I'm Mayur Lavadiya");
+                
+                // HTML method for SET 
+                $('#box p').html("Welcome to my <b>Jquery / Advance Javascript Beginner Tutorials</b>");
+
+                // ATTR method for SET 
+                $('#box h2').attr("class","red");               
             });
+
+            // VAL method for input field by default filled value show
+            $('#sname').val("MAYUR");
+            $('#sclass').val("BSC IT");
+        });
 		
-		});
 	</script>
-</body>
+    </body>
 </html>
