@@ -15,8 +15,10 @@
 	<h1>jQuery on() method - MAYUR LAVADIYA</h1>
 	<div id="box">
 		<h2>For Test Only</h2>
-		<p>Lorem ipsum <span>dolor sit amet</span> consectetur adipisicing elit. Laborum nostrum voluptate delectus.</p>
+		<p>Change the mouse pointer to show the output, hover on text box, click on text box</p>
 	</div><br>
+	<button>Remove event</button>
+
 	<!-- jquery cdn -->
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script>
@@ -25,33 +27,34 @@
 
            
              // single event apply
-            $('#box').on("click",function(){
+            $("#box").on("click",function(){
                 $(this).css("background","orange");
             });
 
              // Multiple event apply at a same time
-             $('#box').on("mouseover mouseout",function(){
+             $("#box").on("mouseover mouseout",function(){
                 $(this).toggleClass("boxbg");
             });
 
            //  Multiple event in deifferent function
-             $('#box').on({
+             $("#box").on({
                 "click" : function(){
                     $(this).css("background","black");
                 },
                 "mouseover" : function(){
-                    $(this).css("background","yellow");                    
+                    $(this).css("background","aquamarine");                    
                 },                
                 "mouseout" : function(){
                     $(this).css("background","lightblue");
                 }
+            });
+                // off() method
+                $("button").click(function(){
+                    $("#box").off("mouseover mouseout");
                 });
-             });
 
-
-
-			
-		// });
+            });
+        
 	</script>
 </body>
 </html>
